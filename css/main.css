@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../assets/fonts/Lato-Light.ttf");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../assets/fonts/Lato-Regular.ttf");
+  font-weight: 400;
+  font-style: normal; }
+
+.row {
+  display: flex;
+  flex-flow: wrap; }
+  .row.between {
+    justify-content: space-between; }
+
+html {
+  font-size: 62.5%;
+  text-rendering: optimizeLegibility;
+  text-align: center; }
+
+.page {
+  font: 300 2.6rem/3.8rem 'Lato';
+  color: #131116; }
+
+.container {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 25px; }
+
+.header {
+  padding-top: 50px; }
+
+.titleh1 {
+  font: 300 5.2rem 'Lato';
+  letter-spacing: .25rem;
+  margin: 0 0 50px; }
+  .titleh1.hs {
+    font-size: 3.8rem;
+    letter-spacing: .2rem; }
+
+.bold {
+  font-weight: 400; }
+
+.subtitle {
+  text-transform: uppercase;
+  font: 300 1.6rem/2rem 'Lato';
+  letter-spacing: .4rem;
+  display: inline-block;
+  margin-bottom: 50px; }
+  .subtitle::before, .subtitle::after {
+    content: '';
+    display: block;
+    width: 60%;
+    border-top: 1px solid #d2cdd8;
+    margin: 0 auto 20px; }
+  .subtitle::after {
+    margin: 20px auto 0;
+    width: 20%; }
+
+.footer {
+  padding: 0 25px 50px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: calc(-1 * 25px);
+  margin-right: calc(-1 * 25px); }
+  .footer .logo {
+    width: 215px;
+    height: 60px;
+    display: block;
+    background: url("../assets/img/logo.png") center/215px 60px no-repeat; }
+  .footer .contacts {
+    font: 300 1.6rem/2.2rem 'Lato';
+    text-align: right; }
+    .footer .contacts p:first-of-type {
+      font: 400 2.2rem/2.8rem 'Lato'; }
+
+.animation {
+  z-index: -1;
+  position: fixed;
+  top: -200px;
+  right: -300px;
+  width: 800px;
+  height: 500px; }
+  .animation canvas {
+    position: static !important; }
+
+.about {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 25px;
+  margin-bottom: 50px;
+  text-align: justify; }
+
+.boxes {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 25px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: calc(-1 * 25px);
+  margin-right: calc(-1 * 25px);
+  text-align: left; }
+  .boxes p {
+    margin: 0 0 25px; }
+
+.boxes_item {
+  flex: 0 0 calc((100% - (50px * 1)) / 2);
+  max-width: calc((100% - (50px * 2)) / 2);
+  margin-left: 25px;
+  margin-right: 25px;
+  color: #9085a1; }
+
+.boxes_item--active {
+  color: #131116; }
+  .boxes_item--active .box_list .icon {
+    background: #6fc76a;
+    box-shadow: -5px 5px 20px #358130; }
+  .boxes_item--active .bold {
+    color: #358130; }
+  .boxes_item--active .list li::before, .boxes_item--active .list li::after {
+    border-color: #358130; }
+  .boxes_item--active .box:hover .icon {
+    box-shadow: -5px 5px 20px #265c23; }
+
+.list {
+  margin: 0 0 50px;
+  font: 300 2rem/2.8rem 'Lato'; }
+  .list li {
+    padding: 0 0 0 25px;
+    margin-bottom: 16.66667px;
+    position: relative; }
+    .list li::before, .list li::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      display: block;
+      position: absolute;
+      top: calc(50% - 5px);
+      left: 0;
+      border-bottom: 1px solid #9085a1;
+      border-left: 1px solid #9085a1; }
+    .list li::after {
+      top: calc(50% - 4px);
+      left: 3px;
+      border-top: 1px solid #9085a1;
+      border-right: 1px solid #9085a1;
+      border-bottom: none;
+      border-left: none; }
+
+.box {
+  padding: 50px;
+  position: relative;
+  margin: 0 0 50px; }
+  .box::before, .box::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 1px solid #d2cdd8;
+    border-left: 1px solid #d2cdd8;
+    transition: all .75s; }
+  .box::after {
+    left: auto;
+    right: 0;
+    border-right: 1px solid #d2cdd8;
+    border-left: none; }
+  .box:hover::before, .box:hover::after {
+    width: 75px;
+    height: 75px;
+    top: -12.5px; }
+  .box:hover::before {
+    left: -12.5px; }
+  .box:hover::after {
+    right: -12.5px; }
+
+.box_list {
+  font: 300 2.1rem/3.4rem 'Lato';
+  letter-spacing: .15rem;
+  text-transform: uppercase; }
+  .box_list::before, .box_list::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #d2cdd8;
+    border-left: 1px solid #d2cdd8;
+    transition: all .75s; }
+  .box_list::after {
+    left: auto;
+    right: 0;
+    border-right: 1px solid #d2cdd8;
+    border-left: none; }
+  .box_list:hover::before, .box_list:hover::after {
+    width: 75px;
+    height: 75px;
+    bottom: -12.5px; }
+  .box_list:hover::before {
+    left: -12.5px; }
+  .box_list:hover::after {
+    right: -12.5px; }
+  .box_list:hover .icon {
+    box-shadow: -5px 5px 20px #453d50; }
+  .box_list li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 0 25px; }
+    .box_list li:last-child {
+      margin: 0; }
+    .box_list li .text {
+      flex: 0 0 calc(100% - 240px);
+      min-width: calc(100% - 240px);
+      margin: 0 25px 0 0; }
+  .box_list .icon {
+    display: block;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #d2cdd8;
+    flex: 0 0 150px;
+    min-width: 150px;
+    box-shadow: -5px 5px 20px #766a89;
+    position: relative;
+    transition: all .75s; }
+    .box_list .icon::after {
+      position: absolute;
+      width: 75px;
+      height: 75px;
+      top: 38px;
+      left: 35px;
+      content: ''; }
+    .box_list .icon.icon--bc::after {
+      background: url("../assets/img/ic2.png"); }
+    .box_list .icon.icon--conv::after {
+      background: url("../assets/img/ic1.png"); }
+    .box_list .icon.icon--pr::after {
+      background: url("../assets/img/ic3.png"); }
+
+.big {
+  font: 300 7.2rem/7.6rem 'Lato';
+  white-space: nowrap;
+  align-self: flex-start;
+  position: relative;
+  left: -40px; }
+  .big .sub {
+    font-size: 2.8rem;
+    text-transform: lowercase; }
+
+.partners {
+  margin: 0 0 50px; }
+
+.purpose {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: calc(-1 * 25px);
+  margin-right: calc(-1 * 25px);
+  margin-bottom: 50px; }
+
+.purpose_item {
+  flex: 0 0 calc((100% - (50px * 1)) / 2);
+  max-width: calc((100% - (50px * 2)) / 2);
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 25px;
+  box-shadow: 0 3px 20px #d2cdd8;
+  text-align: left;
+  background: #fff;
+  transition: all .75s; }
+  .purpose_item:hover {
+    box-shadow: 0 3px 20px #aaa2b7; }
+
+.titleh2 {
+  font: 400 2rem/2.8rem 'Lato';
+  letter-spacing: .3rem;
+  text-transform: uppercase;
+  margin: 0 0 50px;
+  text-align: center; }
+
+.price {
+  font: 300 2.8rem/3.6rem 'Lato';
+  text-align: center;
+  text-transform: uppercase; }
+
+.purpose_item__list {
+  font: 300 2.2rem/3rem 'Lato';
+  padding: 0 25px 25px; }
+  .purpose_item__list li::after {
+    display: block;
+    border-top: 1px solid #d2cdd8;
+    width: 20%;
+    margin: 20px 0;
+    content: '';
+    clear: both; }
+  .purpose_item__list li i {
+    font-size: 4rem;
+    float: right; }
+    .purpose_item__list li i.yes {
+      color: #358130; }
+    .purpose_item__list li i.no {
+      color: #c83232; }
+  .purpose_item__list li .bold {
+    font-size: 2.4rem;
+    float: right; }
