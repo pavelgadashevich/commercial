@@ -321,9 +321,9 @@ html {
       background-size: 60px 60px;
       background-repeat: no-repeat; }
     .box_list .icon.icon--bc::after {
-      background-image: url("../assets/img/ic2.svg"); }
-    .box_list .icon.icon--conv::after {
       background-image: url("../assets/img/ic1.svg"); }
+    .box_list .icon.icon--conv::after {
+      background-image: url("../assets/img/ic2.svg"); }
     .box_list .icon.icon--pr::after {
       background-image: url("../assets/img/ic3.svg"); }
 
