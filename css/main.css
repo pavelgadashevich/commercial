@@ -64,7 +64,14 @@ html {
 .container {
   max-width: 1190px;
   margin: 0 auto;
-  padding: 0 25px; }
+  padding: 0 25px;
+  background: #fff; }
+
+@keyframes move {
+  from {
+    bottom: 40px; }
+  to {
+    bottom: 25px; } }
 
 .header {
   display: flex;
@@ -73,12 +80,31 @@ html {
   height: 100vh;
   color: #fff;
   background: #131116;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  position: relative; }
   .header .titleh1 {
     max-width: 1140px;
     margin: auto;
     position: relative;
+    z-index: 4; }
+  .header::before {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
     z-index: 3; }
+
+.scroll {
+  width: 25px;
+  height: 50px;
+  position: absolute;
+  bottom: 25px;
+  left: calc(50% - 12.5px);
+  background: url("../assets/img/mouse.svg");
+  animation: move .75s infinite alternate; }
 
 .titleh1 {
   font: 300 5.2rem 'Lato';
@@ -130,7 +156,7 @@ html {
   width: 800px;
   height: 800px;
   left: calc(50% - 400px);
-  top: 0;
+  left: calc(50% - 400px);
   position: absolute;
   z-index: 2; }
   .animation canvas {
@@ -290,13 +316,16 @@ html {
       height: 75px;
       top: 38px;
       left: 35px;
-      content: ''; }
+      content: '';
+      background-position: center;
+      background-size: 60px 60px;
+      background-repeat: no-repeat; }
     .box_list .icon.icon--bc::after {
-      background: url("../assets/img/ic2.png"); }
+      background-image: url("../assets/img/ic2.svg"); }
     .box_list .icon.icon--conv::after {
-      background: url("../assets/img/ic1.png"); }
+      background-image: url("../assets/img/ic1.svg"); }
     .box_list .icon.icon--pr::after {
-      background: url("../assets/img/ic3.png"); }
+      background-image: url("../assets/img/ic3.svg"); }
 
 .big {
   font: 300 7.2rem/7.6rem 'Lato';
