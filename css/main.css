@@ -67,7 +67,7 @@ html {
   padding: 0 25px; }
 
 .header {
-  padding-top: 50px; }
+  padding-top: 400px; }
 
 .titleh1 {
   font: 300 5.2rem 'Lato';
@@ -116,12 +116,12 @@ html {
       font: 400 2.2rem/2.8rem 'Lato'; }
 
 .animation {
-  z-index: -1;
-  position: fixed;
-  top: -200px;
-  right: -300px;
   width: 800px;
-  height: 500px; }
+  height: 800px;
+  left: calc(50% - 400px);
+  top: -200px;
+  position: absolute;
+  z-index: -1; }
   .animation canvas {
     position: static !important; }
 
@@ -130,7 +130,7 @@ html {
   margin: 0 auto;
   padding: 0 25px;
   margin-bottom: 50px;
-  text-align: justify; }
+  text-align: center; }
 
 .boxes {
   max-width: 1190px;
@@ -145,6 +145,8 @@ html {
   text-align: left; }
   .boxes p {
     margin: 0 0 25px; }
+  .boxes .title {
+    margin-bottom: 50px; }
 
 .boxes_item {
   flex: 0 0 calc((100% - (50px * 1)) / 2);
@@ -328,7 +330,7 @@ html {
   text-align: center; }
 
 .price {
-  font: 300 2.8rem/3.6rem 'Lato';
+  font: 300 2.4rem/3.6rem 'Lato';
   text-align: center;
   text-transform: uppercase; }
 
